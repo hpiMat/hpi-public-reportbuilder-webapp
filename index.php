@@ -14,6 +14,11 @@
 <body>
 <div> Hello World </div>
 <div> Changement1 </div>
+<<<<<<< HEAD
     <div> Changement philippe</div>
+=======
+<div> Changement Laurent </div>
+
+>>>>>>> origin/master
 </body>
 </html>

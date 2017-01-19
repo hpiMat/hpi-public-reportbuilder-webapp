@@ -18,7 +18,11 @@
     <div> Changement philippe</div>
 =======
 <div> Changement Laurent </div>
+<<<<<<< HEAD
 
+>>>>>>> origin/master
+=======
+<div> Changement branche Matthieu</div>
 >>>>>>> origin/master
 </body>
 </html>

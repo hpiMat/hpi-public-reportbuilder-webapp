@@ -14,15 +14,9 @@
 <body>
 <div> Hello World </div>
 <div> Changement1 </div>
-<<<<<<< HEAD
-    <div> Changement philippe</div>
-=======
+<div> Changement philippe</div>
 <div> Changement Laurent </div>
-<<<<<<< HEAD
-
->>>>>>> origin/master
-=======
 <div> Changement branche Matthieu</div>
->>>>>>> origin/master
+
 </body>
 </html>

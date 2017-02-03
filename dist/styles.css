@@ -1,0 +1,278 @@
+* {
+    font-family: DIN-pro-light, Arial, san-serif;
+}
+/* ------------------------------------------------------------------------ */
+/* Header                                                                   */
+/* ------------------------------------------------------------------------ */
+.header {
+    position:fixed;         /* header fixe reste tout le temps en haut même si scroll */
+    height: 60px;
+    width: 100%;            /* toute la largeur de l'écran*/
+    top: 0;
+    left: 0;
+    right: 0;
+    
+    background: #fdaf17;    /* Orange HPI */
+    
+    display: -webkit-flex;  /* les éléments du header se rangent en ligne */
+    display: flex;
+    
+    justify-content: space-between;  /*les éléments du header s'espacent automatiquement */ 
+}
+.header-connexion-button {     
+    margin-right: 15px;
+    margin-top: 20px;
+}
+.header-menu-button {     
+    margin-top: 0px;
+}
+/* ------------------------------------------------------------------------ */
+/* Footer                                                                   */
+/* ------------------------------------------------------------------------ */
+.footer {
+    position:fixed;         /* footer fixe reste tout le temps en haut même si scroll */
+    height: 62px;
+    width: auto;            /* idem 100% = toute la largeur */
+    bottom: 0;              /* fixe le footer en bas de la page */
+    left: 0;                /* semble nécessaire pour que la couleur de fond aille jusqu'au                           bord gauche */
+    right: 0;               /* semble nécessaire pour que la couleur de fond aille jusqu'au                           bord droit */
+  
+    background: #0e5157;    /* Vert HPI */
+    
+    display: -webkit-flex;  /* les éléments du footer se rangent en ligne */
+    display: flex;
+    
+    justify-content: space-between; /*les éléments du footer s'espacent automatiquement */
+}
+.footer-center {
+    color: #fff;            /* texte central en blanc */
+    margin-top: 23px;       /* centré verticalement */
+}
+.footer-list {              /* les deux textes en bas à droite sont gérés comme une liste */
+    list-style-type: none;  /* pas de marqueur avant les textes de la liste (point...) */
+    float: right;           /* calé à droite */
+    margin-right: 20px;     /* mais pas trop !*/
+}
+.footer-list a {
+    text-decoration: none;  /* pas de souligné ni de bleu pour les liens href */   
+}
+.footer-list a:hover {
+    text-decoration-color: #fdaf17; /* Orange HPI lorsque l'on survole les textes */
+}                                   /* @@@@@@@@@@@@ ne marche pas                 */
+.footer-list p {
+    color: #fff;
+    margin-top: 0;          /* pour centrer les deux textes    */
+    margin-bottom: 0;       /* verticalement  ..... empirique !*/
+    text-align: center;
+}
+/* ------------------------------------------------------------------------ */
+/* Ecran d'accueil (style des deux colonnes dans le HTML ! à modifier @@@@@ */
+/* ------------------------------------------------------------------------ */
+.accueil
+{
+    padding:100px 0 0 0;
+}
+/* ------------------------------------------------------------------------ */
+/* Le menu latéral */
+/* ------------------------------------------------------------------------ */
+
+.sidenav {
+    height: auto;    /* auto adapte la taille verticale au contenu */
+    position: fixed; /* Stay in place */
+    top: 62px;       /* Place content 62px from the top sous le header */
+    width: 0;        /* invisible avant le clic sur bouton menu*/
+    left: 0;
+    padding-top: 60 px;
+    
+    border: 1px solid #ccc;
+    
+    background-color: #0e5157;  /* vert HPI*/
+    
+    overflow-x: hidden;         /* Disable horizontal scroll */
+    z-index: 1;             /* Stay on top */
+                          
+}
+
+/* The navigation menu links */
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    display:block;
+    
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+}
+
+/* When you mouse over the navigation links, change their color */
+.sidenav a:hover, .offcanvas a:focus{
+    color: #fdaf17;
+}
+
+/* Position and style the close button (top right corner) */
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    margin-left: 50px;
+    
+    font-size: 36px;
+}
+
+/* Style page content - use this if you want to push the page content to the right when you open the side navigation */
+/*#main {
+    transition: margin-left .5s;
+    padding: 20px;
+}*/
+
+/* On smaller screens, where height is less than 450px, change the style of the sidenav (less padding and a smaller font size) */
+@media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+/* ------------------------------------------------------------------------ */
+/* Fenêtres modales */
+/* ------------------------------------------------------------------------ */
+.modalDialog {
+	position: fixed;
+	top: 0;
+	right: 0;
+	bottom: 0;
+	left: 0;
+    
+	background: rgba(14,81,87,0.7);
+    
+	z-index: 99999;
+	opacity:0;
+	-webkit-transition: opacity 400ms ease-in;
+	-moz-transition: opacity 400ms ease-in;
+	transition: opacity 400ms ease-in;
+	pointer-events: none;
+}
+.modalDialog:target {
+	opacity:1;
+	pointer-events: auto;
+}
+
+.modalDialog > div {
+	width: 400px;
+	position: relative;
+	margin: 10% auto;
+	padding: 5px 20px 13px 20px;
+    
+	border-radius: 10px;
+    
+	background: #fff;
+	background: -moz-linear-gradient(#fff, #fdaf17);
+	background: -webkit-linear-gradient(#fff, #fdaf17);
+	background: -o-linear-gradient(#fff, #fdaf17);
+}
+
+.close {
+
+	line-height: 25px;
+	position: absolute;
+	right: -12px;
+	top: -10px;
+	width: 24px;
+	-moz-box-shadow: 1px 1px 3px #000;
+	-webkit-box-shadow: 1px 1px 3px #000; 
+	box-shadow: 1px 1px 3px #000;
+    
+    -webkit-border-radius: 12px;
+	-moz-border-radius: 12px; 
+	border-radius: 12px;
+    
+    background: #0e5157;
+    
+    text-align: center;
+	text-decoration: none;
+	font-weight: bold;
+
+
+	color: #FFFFFF;
+
+}
+
+.close:hover { background: #fdaf17; }
+
+/* ------------------------------------------------------------------------ */
+/* Ecran de login */
+/* ------------------------------------------------------------------------ */
+/* Bordered form */
+form {
+    border: 3px solid #fff;
+}
+
+/* Full-width inputs */
+input[type=text], input[type=password] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    box-sizing: border-box;
+    
+    border: 1px solid #ccc;
+}
+
+/* Set a style for all buttons */
+button {
+    padding: 14px 20px;
+    margin: 8px 0;
+    width: 100%;
+    
+    border: none;
+    
+    background-color: #0e5157;
+    color: white;
+
+    cursor: pointer;
+}
+
+/* Extra style for the cancel button (red) */
+.cancelbtn {
+    width: auto;
+    padding: 10px 18px;
+    
+    background-color: #fdaf17;
+}
+
+/* Center the avatar image inside this container */
+.titre_login p {
+    margin: 24px 0 12px 0;
+    
+    text-align: center;
+    font-weight: bold;
+    font-size: 25px;
+    color: #0e5157;
+}
+
+/* Avatar image */
+img.avatar {
+    width: 40%;
+    
+    border-radius: 50%;
+}
+
+/* Add padding to containers */
+.container {
+    padding: 16px;
+}
+
+/* The "Forgot password" text */
+span.psw {
+    padding-top: 16px;
+    
+    float: right;
+}
+
+/* Change styles for span and cancel button on extra small screens */
+@media screen and (max-width: 300px) {
+    span.psw {
+        display: block;
+        
+        float: none;
+    }
+    .cancelbtn {
+        width: 100%;
+    }
+}
